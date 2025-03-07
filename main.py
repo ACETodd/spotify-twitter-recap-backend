@@ -114,6 +114,8 @@ async def get_currently_playing(access_token: str):
                 headers={
                     "Access-Control-Allow-Origin": "https://spotify-twitter-recap.vercel.app/",
                     "Access-Control-Allow-Credentials": "true",
+                    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+                    "Access-Control-Allow-Headers": "Content-Type, Authorization, Origin"
                 }
             )
             
@@ -144,6 +146,8 @@ async def get_currently_playing(access_token: str):
             headers={
                 "Access-Control-Allow-Origin": "https://spotify-twitter-recap.vercel.app/",
                 "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization, Origin"
             }
         )
 
