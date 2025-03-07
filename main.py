@@ -12,7 +12,7 @@ app = FastAPI()
 
 # Updated CORS middleware configuration
 origins = [
-    "https://spotify-twitter-recap.vercel.app/",  # Next.js frontend
+    "https://spotify-twitter-recap.vercel.app",  # Next.js frontend
 ]
 
 app.add_middleware(
