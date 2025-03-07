@@ -12,7 +12,7 @@ app = FastAPI()
 
 # Updated CORS middleware configuration
 origins = [
-    "http://localhost:3000",  # Next.js frontend
+    "https://spotify-twitter-recap.vercel.app/",  # Next.js frontend
 ]
 
 app.add_middleware(
@@ -70,7 +70,7 @@ async def refresh_token(request: Request):
         return JSONResponse(
             content=token_data,
             headers={
-                "Access-Control-Allow-Origin": "http://localhost:3000",
+                "Access-Control-Allow-Origin": "https://spotify-twitter-recap.vercel.app/",
                 "Access-Control-Allow-Credentials": "true",
             }
         )
@@ -112,7 +112,7 @@ async def get_currently_playing(access_token: str):
             return JSONResponse(
                 content={"is_playing": False, "track": None},
                 headers={
-                    "Access-Control-Allow-Origin": "http://localhost:3000",
+                    "Access-Control-Allow-Origin": "https://spotify-twitter-recap.vercel.app/",
                     "Access-Control-Allow-Credentials": "true",
                 }
             )
@@ -142,7 +142,7 @@ async def get_currently_playing(access_token: str):
         return JSONResponse(
             content=track_data,
             headers={
-                "Access-Control-Allow-Origin": "http://localhost:3000",
+                "Access-Control-Allow-Origin": "https://spotify-twitter-recap.vercel.app/",
                 "Access-Control-Allow-Credentials": "true",
             }
         )
@@ -316,7 +316,7 @@ async def callback(code: str):
         return JSONResponse(
             content=user_data,
             headers={
-                "Access-Control-Allow-Origin": "http://localhost:3000",
+                "Access-Control-Allow-Origin": "https://spotify-twitter-recap.vercel.app/",
                 "Access-Control-Allow-Credentials": "true",
             }
         )
